@@ -1,7 +1,12 @@
 import { expect, it } from "vitest";
 
+interface Cache {
+  [id: string]: string
+}
 const createCache = () => {
-  const cache = {};
+  const cache: Cache = {
+    id: '01',
+  };
 
   const add = (id: string, value: string) => {
     cache[id] = value;
